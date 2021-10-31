@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        section{
+            background-color: aquamarine;
+            padding: 40px;
+            width: 50%;
+            margin: 40px auto;
+        }
+        #email-field{
+            display: block;
+            width: 75%;
+            margin-bottom: 10px;
+            
+        }
+        #password-field{
+            display: block;
+            width: 75%;
+            margin-bottom: 10px;
+        }
+
+        #submit-button{
+            color: white;
+            background-color: tomato;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        
+        #bank-name{
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 72, 155);
+            font-size: 50px;
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="bank-name">Pioneer Bank</h1>
+        <section>
+        <h1>Login Form</h1>
+            <input type="text" id="email-field">
+            <input type="password" id="password-field">
+            <button id="submit-button">Submit</button>
+        </section>
+    </main>
+
+    <script>
+    document.getElementById('submit-button').addEventListener('click', function(){
+        const email = document.getElementById('email-field');
+        const password = document.getElementById('password-field');
+        const userEmail = email.value;
+        const userPassword = password.value;
+        if(userEmail == 'donald@email.com' && userPassword == 'donald22'){
+            window.location.href = 'bank.html';
+        }
+        else{
+            alert('invalid email and password')
+        }
+    })
+
+
+    </script>
+
+
+</body>
+</html>
